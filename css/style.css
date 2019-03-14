@@ -17,7 +17,7 @@ a {
 header {
    min-height: 750px;
    margin-bottom: 50px;
-   background-color: rgb(145, 145, 145);
+   background: url(../img/header-bg.jpg) top center no-repeat / cover;
 }
 
 .flex-wrp {
