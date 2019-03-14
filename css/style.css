@@ -140,6 +140,7 @@ a {
 .download-btn {
    display: block;
    width: fit-content;
+   width: -moz-fit-content;
    height: 65px;
    padding: 0 50px;
    margin: 70px auto;
