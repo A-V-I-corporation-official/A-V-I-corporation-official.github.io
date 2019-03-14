@@ -1,1 +1,0 @@
-# A-V-I-corporation-official.github.io
