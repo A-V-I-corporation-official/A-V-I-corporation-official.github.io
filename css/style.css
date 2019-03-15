@@ -207,6 +207,12 @@ a {
    text-align: center;
    line-height: 65px;
    transition: all .3s;
+   animation: scale .3s;
+}
+
+@key-frames {
+   from{scale: .2;}
+   to{scale: 1;}
 }
 
 .download-btn-black {
