@@ -1,7 +1,6 @@
 body {
    font-family: Roboto-Regular;
    color: #0d0d1b;
-   overflow-x: hidden;
 }
 
 a {
@@ -26,6 +25,7 @@ a {
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
+   overflow-x: hidden;
 }
 
 .about-header {
