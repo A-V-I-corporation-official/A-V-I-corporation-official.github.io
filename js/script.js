@@ -1,4 +1,4 @@
-var gameHeader = document.querySelector('.games-header');
+var gameHeader = document.querySelector('.header');
 
 function paralax() {
    let s = window.pageYOffset / 2;
