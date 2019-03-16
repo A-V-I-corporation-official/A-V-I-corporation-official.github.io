@@ -21,15 +21,12 @@ a {
    min-height: 750px;
    padding-bottom: 50px;
    margin-bottom: 50px;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
    overflow-x: hidden;
 }
 
 .about-header {
-   background: url(../img/about-bg.jpg) top center no-repeat / cover;
+   background: url(../img/about-bg.jpg) top center no-repeat;
+   background-size: cover;
    position: relative;
 }
 
@@ -47,19 +44,29 @@ a {
 }
 
 .games-header {
-   background: url(../img/header-bg.jpg) top center no-repeat / cover;
+   background: url(../img/header-bg.jpg) top center no-repeat;
+   background-size: cover;
 }
 
 .flex-wrp {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   justify-content: space-between;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+           justify-content: space-between;
    padding-top: 25px;
 }
 
 @media (max-width: 1100px) {
    .flex-wrp {
-      flex-direction: column;
-      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
    }
    .game__menu {
       display: none;
@@ -80,8 +87,13 @@ a {
    }
 
    .menu__ul {
-      flex-direction: column;
-      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       height: 200px;
    }
 }
@@ -92,9 +104,13 @@ a {
 
 
 .menu__ul {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
    width: 450px;
-   justify-content: space-between;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+           justify-content: space-between;
    text-transform: uppercase;
    padding-top: 32px;
 }
@@ -103,6 +119,8 @@ a {
    font-size: 25px;
    color: inherit;
    opacity: .7;
+   -webkit-transition: .2s;
+   -o-transition: .2s;
    transition: .2s;
    position: relative;
 }
@@ -115,7 +133,11 @@ a {
    height: 3px;
    bottom: 0;
    left: 50%;
-   transform: translate(-50%,0);
+   -webkit-transform: translate(-50%,0);
+       -ms-transform: translate(-50%,0);
+           transform: translate(-50%,0);
+   -webkit-transition: all .2s;
+   -o-transition: all .2s;
    transition: all .2s;
    width: 100%;
 }
@@ -195,6 +217,7 @@ a {
 
 .download-btn {
    display: block;
+   width: -webkit-fit-content;
    width: fit-content;
    width: -moz-fit-content;
    padding: 0 50px;
@@ -206,13 +229,31 @@ a {
    border: 3px solid #fff;
    text-align: center;
    line-height: 65px;
+   -webkit-transition: all .3s;
+   -o-transition: all .3s;
    transition: all .3s;
-   animation: scale .3s;
+   -webkit-animation: scale .5s;
+           animation: scale .5s;
 }
 
-@key-frames {
-   from{scale: .2;}
-   to{scale: 1;}
+@-webkit-keyframes scale {
+   from {
+      -webkit-transform: scale(.2);
+              transform: scale(.2);
+   } to {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+   }
+}
+
+@keyframes scale {
+   from {
+      -webkit-transform: scale(.2);
+              transform: scale(.2);
+   } to {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+   }
 }
 
 .download-btn-black {
