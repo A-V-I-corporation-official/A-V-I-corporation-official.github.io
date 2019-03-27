@@ -1,7 +1,7 @@
 var gameHeader = document.querySelector('.header');
 
 function paralax() {
-   let s = window.pageYOffset / 2;
+   let s = window.pageYOffset / 3;
    gameHeader.style.backgroundPosition = 'center ' + s + 'px';
 }
 
